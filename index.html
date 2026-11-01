@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecowaste - Вивезення сміття</title>
+    <meta name="description"
+        content="EcoWaste — швидке та надійне вивезення побутового, будівельного та великогабаритного сміття. Зручне замовлення та якісне обслуговування.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header_logo">
+                <a href="#">Ecowaste</a>
+            </div>
+            <nav class="header_nav">
+                <ul class="header_list">
+                    <li><a href="#services">Послуги</a></li>
+                    <li><a href="#about">Про нас</a></li>
+                    <li><a href="#contact">Контакти</a></li>
+                </ul>
+            </nav>
+            <a href="#order" class="header_button">Замовити</a>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Швидке та надійне вивезення сміття</h1>
+                <p>Вивозимо будівельне та побутове сміття. Працюємо швидко, акуратно та за доступними цінами.</p>
+                <div class="hero_buttons">
+                    <a href="#order" class="hero_order_button">Замовити вивезення</a>
+                    <a href="#services" class="hero_service_button">Наші послуги</a>
+                </div>
+            </div>
+        </section>
+        <section class="services" id="services">
+            <div class="container">
+                <h2>Наші послуги</h2>
+                <p>Допоможемо швидко та зручно позбутися непотрібного сміття</p>
+                <div class="services_grid">
+                    <div class="services_card">
+                        <h3>Побутове сміття</h3>
+                        <p>Вивезення побутових відходів</p>
+                    </div>
+                    <div class="services_card">
+                        <h3>Будівельне сміття</h3>
+                        <p>Прибирання після ремонту</p>
+                    </div>
+                    <div class="services_card">
+                        <h3>Великогабаритне</h3>
+                        <p>Вивезення меблів та техніки</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="container">
+                <h2>Про нас</h2>
+                <p>EcoWaste допомагає швидко та зручно організувати вивезення побутових і будівельних відходів. Ми
+                    цінуємо час клієнтів і дбаємо про якість роботи.</p>
+                <ul class="about_list">
+                    <li>Швидкий виїзд</li>
+                    <li>Прозорі ціни</li>
+                    <li>Акуратна робота</li>
+                </ul>
+            </div>
+        </section>
+        <section class="order" id="order">
+            <div class="container">
+                <h2>Замовити вивезення</h2>
+                <p class="tip">Заповніть форму, і ми зв'яжемося з вами для уточнення деталей.</p>
+                <form class="order_form" novalidate>
+                    <label for="name">Ваше ім'я</label>
+                    <input class="form_el" type="text" id="name" name="order_name" aria-describedby="name_error"
+                        placeholder="Введіть ім'я" required>
+                    <p class="form_errors" id="name_error"></p>
+                    <label for="phone">Номер телефону</label>
+                    <input class="form_el" type="tel" id="phone" name="order_phone" aria-describedby="phone_error"
+                        placeholder="+380 XX XXX XX XX" required>
+                    <p class="form_errors" id="phone_error"></p>
+                    <label for="type">Тип сміття</label>
+                    <select class="form_el" name="order_type" aria-describedby="type_error" id="type" required>
+                        <option value="" disabled selected>Оберіть тип сміття</option>
+                        <option value="household">Побутове сміття</option>
+                        <option value="build">Будівельне сміття</option>
+                        <option value="oversized">Великогабаритне сміття</option>
+                    </select>
+                    <p class="form_errors" id="type_error"></p>
+                    <label for="comment">Коментар</label>
+                    <textarea class="form_el" rows="5" cols="40" id="comment" name="comment"
+                        placeholder="Опишіть, що потрібно вивезти..."></textarea>
+                    <button type="submit">Надіслати заявку</button>
+                    <p class="form_message" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer_grid">
+                <div class="footer_about">
+                    <h3 class="footer_h3">EcoWaste</h3>
+                    <p>Швидке та надійне вивезення сміття</p>
+                </div>
+                <div class="footer_nav">
+                    <h3 class="footer_h3">Навігація</h3>
+                    <a href="#services">Послуги</a>
+                    <a href="#about">Про нас</a>
+                    <a href="#order">Замовити</a>
+                </div>
+                <div class="footer_contacts" id="contact">
+                    <h3 class="footer_h3">Контакти</h3>
+                    <a href="tel:+380XXXXXXXXX">Телефон компанії</a>
+                    <a href="mailto:example@domain.com">Електронна пошта</a>
+                </div>
+            </div>
+        </div>
+        <div class="container container_avtor">
+            <p class="avtor">© 2026 EcoWaste. Усі права захищено.</p>
+        </div>
+    </footer>
+    <script src="js/main.js" defer></script>
+</body>
+
+</html>

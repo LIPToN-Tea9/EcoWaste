@@ -1,0 +1,392 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111827;
+    background-color: #f8fafc;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+}
+
+.header_list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 30px;
+}
+
+.header_logo a {
+    font-size: 26px;
+    font-weight: bold;
+    color: #166534;
+    text-decoration: none;
+}
+
+.header_list a {
+    font-size: 16px;
+    color: #111827;
+    font-weight: bolder;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.header_list a:hover {
+    color: #166534;
+}
+
+.header_button {
+    background-color: #166534;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bolder;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.header_button:hover {
+    background-color: #14532d;
+}
+
+.hero {
+    background-color: #d5fde1;
+    padding: 100px 0px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #14532d;
+    max-width: 650px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #475569;
+    max-width: 550px;
+    margin-top: 24px;
+}
+
+.hero_buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.hero_order_button {
+    background-color: #166534;
+    color: white;
+    border-radius: 8px;
+    padding: 12px 24px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.hero_service_button {
+    background-color: transparent;
+    color: green;
+    border: green 1px solid;
+    border-radius: 8px;
+    padding: 12px 24px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.services {
+    background-color: #f8fafc;
+    padding: 80px 0px;
+}
+
+.services h2 {
+    font-size: 36px;
+    color: #111827;
+    text-align: center;
+}
+
+.services p {
+    font-size: 18px;
+    color: #64748b;
+    text-align: center;
+}
+
+.services_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.services_card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px;
+    border: gray 1px solid;
+    transition: 0.3s;
+}
+
+.services_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.12);
+}
+
+.services_card h3 {
+    text-align: center;
+    font-size: 22px;
+}
+
+.services_card p {
+    font-size: 16px;
+}
+
+.about {
+    background-color: #f0fdf4;
+    padding: 80px 0px;
+}
+
+.about h2 {
+    font-size: 36px;
+    color: #14532d;
+}
+
+.about p {
+    font-size: 18px;
+    color: #475569;
+    max-width: 650px;
+}
+
+.about_list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.about_list li {
+    padding: 10px 0;
+    font-size: 18px;
+}
+
+.about_list li::before {
+    content: "✓";
+    color: #166534;
+    padding-right: 12px;
+}
+
+.order {
+    background-color: #f8fafc;
+    padding: 80px 0px;
+}
+.order h2 {
+    font-size: 36px;
+    color: #111827;
+}
+.tip {
+    font-size: 18px;
+    color: #64748b;
+}
+.order_form {
+    box-sizing: border-box;
+    background-color: white;
+    border: gray 1px solid;
+    border-radius: 12px;
+    max-width: 500px;
+    padding: 30px;
+}
+.order_form textarea {
+    resize: none;
+}
+.form_el {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: #cbd5e1 2px solid;
+    border-radius: 8px;
+    font-size: 16px;
+    margin: 10px 0px 10px 0px;
+    outline: none;
+}
+.form_el:focus {
+    border-color: #166534;
+}
+.order_form label {
+    display: block;
+    color: #111827;
+    font-size: 16px;
+    font-weight: bolder;
+}
+.order_form button {
+    width: 100%;
+    background-color: #166534;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 14px 0px 14px 0px;
+    transition: 0.3s;
+    border: none;
+}
+.order_form button:hover {
+    background-color: #14532d;
+    cursor: pointer;
+}
+
+.form_message {
+    margin-top: 16px;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.form_message.success {
+    background-color: #cbffdbb6;
+    color: #166534;
+}
+
+.form_message.error {
+    background-color: #fadedeb2;
+    color: #dc2626;
+}
+
+.form_el.form_error_label {
+    border-color: #dc2626;
+    margin-bottom: 2px;
+}
+
+.form_el.form_error_label:focus {
+    box-shadow:
+        0px 0px 5px rgba(255, 0, 0, 0.521),
+        0px 0px 5px black;
+}
+.order p.form_errors {
+    color: #dc2626;
+    font-size: 13px;
+    margin-top: 0;
+}
+
+footer {
+    background-color: #14532d;
+    padding: 50px 0px 50px 0px;
+}
+
+.footer_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.footer_h3 {
+    color: white;
+    font-size: 22px;
+    margin: 0;
+}
+
+.footer_about p {
+    color: #d1fae5;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.footer_nav {
+    display: grid;
+    gap: 10px;
+}
+
+.footer_nav a {
+    color: #d1fae5;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.footer_nav a:hover {
+    color: white;
+}
+
+.footer_contacts {
+    display: grid;
+    gap: 10px;
+}
+
+.footer_contacts a {
+    color: #d1fae5;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer_contacts a:hover {
+    color: white;
+}
+
+.container_avtor {
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px #d1fae5 solid;
+}
+
+.avtor {
+    margin-top: 20px;
+    color: #d1fae5;
+    font-size: 14px;
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .services_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header_nav {
+        display: none;
+    }
+    .hero h1 {
+        font-size: 32px;
+    }
+    .hero {
+        padding: 50px 0px;
+    }
+    .hero_buttons {
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 250px;
+        margin: auto;
+    }
+    .services {
+        padding: 50px 0px;
+    }
+    .services_grid {
+        grid-template-columns: 1fr;
+    }
+    .about {
+        padding: 30px 0px;
+    }
+    .order {
+        padding: 30px 0px;
+    }
+    .order h2 {
+        font-size: 32px;
+    }
+    .tip {
+        font-size: 15px;
+    }
+    .footer_grid {
+        grid-template-columns: 1fr;
+    }
+}
