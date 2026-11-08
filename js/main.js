@@ -6,6 +6,7 @@ const formPhone = document.getElementById("phone");
 const formPhoneError = document.getElementById("phone_error");
 const formType = document.getElementById("type");
 const formTypeError = document.getElementById("type_error");
+const formBtn = document.getElementById("form_btn");
 
 function validatePhone(phone) {
     const userPhone = phone.trim();
@@ -103,8 +104,30 @@ orderForm.addEventListener("submit", function (event) {
     }
 
     if (isFormValid(userNameValid, userPhoneValid, userOrderTypeValid)) {
-        showFormMessage("Дані форми правильні", "success");
-        orderForm.reset();
+        formBtn.disabled = true;
+        formBtn.textContent = "Надсилання...";
+        fetch("https://formspree.io/f/xaeepgpb", {
+            method: "POST",
+            body: formData,
+            headers: {
+                Accept: "application/json",
+            },
+        })
+            .then((response) => {
+                if (response.ok) {
+                    orderForm.reset();
+                    showFormMessage("Заявку успішно надіслано", "success");
+                } else {
+                    showFormMessage("Не вдалося надіслати заявку", "error");
+                }
+            })
+            .catch(() => {
+                showFormMessage("Помилка мережі. Спробуйте ще раз", "error");
+            })
+            .finally(() => {
+                formBtn.disabled = false;
+                formBtn.textContent = "Надіслати заявку";
+            });
     } else {
         showFormMessage("Перевірте введені дані", "error");
         if (!userNameValid) {

@@ -239,9 +239,14 @@ header .container {
     transition: 0.3s;
     border: none;
 }
-.order_form button:hover {
+.order_form button:hover:not(:disabled) {
     background-color: #14532d;
     cursor: pointer;
+}
+
+.order_form button:disabled {
+    background-color: #779884;
+    cursor: wait;
 }
 
 .form_message {
